@@ -22,3 +22,34 @@
 # Props কি ?
 ## Props মাধ্যমে value transfer করা যায় । value Assign করা যায়
  
+# setState কি ?
+## বাংলায় বলতে গেলে State value পরিবতন করা যায় । 
+### নিচে ছোট একটা উদাহরণ দেওয়া হল 
+
+```
+class App extends Component {
+state ডিফাইন করে দিলাম null
+Input ভালুএ কে পাসস করাবো 
+  state = {
+    inputText:''
+  }
+
+  testHandle = (e) => {
+    this.setState({ inputText: e.target.value }); Input ভালুএ কে পাসস করে দিলাম 
+    প্রথমত null ছিল setState দিয়ে value change করায় দিলাম । 
+    console.log(this.state.inputText); state Value কে console.log korlam
+  }
+
+  render() {
+    return (
+      <div> 
+        <form action="" method="">
+          <input type="text" placeholder='input text' onChange={this.testHandle} />
+        </form>
+      </div>
+    )
+  }
+}
+export default App;
+
+```
