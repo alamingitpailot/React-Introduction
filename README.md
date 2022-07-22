@@ -81,4 +81,44 @@ export default App;
 ````
 * আভাবে আমরা inline css ব্যবহার করি 
 
+## React External css ব্যবহার করতে পারি 
+
+* এই কাজ টুকু করার মাধ্যমে ExportVariable কি ভাবে কাজ করে তা জানতে পারছি । 
+* Style.js ভিতরে আমি css গুলি লিখি তারপর App.js ব্যবহার করি 
+* css লিখার মাধ্যমে module.exports করা হয় । 
+
+```
+const btnStyle = {
+    color: "white",
+    background: 'red',
+    padding: '10px',
+    borderRadius: '3px',
+    border:'none'
+}
+  
+module.exports = {
+    btnStyle:btnStyle
+}
+
+
+```
+* Style.js ফাইল কে import করে নিতে হবে । 
+* module.exports যেই নাম তা দেওয়া হয় সেই নাম তা app.js ব্যবহার করলেই style গুলি পেয়ে যায় । 
+
+```
+var { btnStyle } = require('./Styles');
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Style in React</h1>
+        <button style={btnStyle}>Button Style</button>
+      </div>
+    )
+  }
+}
+
+export default App;
+```
+
 
