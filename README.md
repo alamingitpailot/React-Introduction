@@ -121,4 +121,81 @@ class App extends Component {
 export default App;
 ```
 
+# জানবো কিভাবে URl REQUEST করে ডাটা আনতে হয় 
+## React Lifecycle of Components রয়েছে 
+* Mounting
+* Updating
+* UnMounting
+
+#### Mounting 
+* Render
+* getDerivedStateFromProps()
+* constructor
+* componentDidMount()
+# ------------------------------------
+### আমরা যখন url request করে ডাটা নিয়ে আসব তখন axios দিয়ে ডাটা get করে আনতে হয় । 
+
+
+```
+componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/todos').then(
+      res => this.setState({products:res.data})
+    )
+  }
+  ```
+### নিচে একটি উদাহরণ দিয়া হলও 
+
+```
+import Products from './components/Products'
+import axios from 'axios';
+ 
+class App extends Component {
+
+  state = {
+    products: [],
+    ps:false
+  }
+  
+  productShow = (e) => {
+    this.setState({ ps: true });
+  }
+
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/todos').then(
+      res => this.setState({products:res.data})
+    )
+  }
+
+  render() {
+
+    var productMarkup = '';
+    if (this.state.ps === true) {
+      productMarkup = <Products items={ this.state.products } />
+    }
+
+     return (
+        <div> 
+         <button onClick={this.productShow}>Show Product</button>
+         { productMarkup }
+        </div>
+     )
+   }
+}
+export default App;
+```
+#### product.js Components
+
+```
+import React, { Component } from 'react'
+
+ class Products extends Component {
+    render() {
+        return this.props.items.map((product) => (
+          <li key={ product.id}>{ product.title }</li>
+        ))
+    }
+} 
+export default Products;
+```
+
 
