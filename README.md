@@ -53,3 +53,32 @@ Input ভালুএ কে পাসস করাবো
 export default App;
 
 ```
+
+# React styleing
+### প্রথমত আমি inline css ব্যবহার করবো । 
+### নিচে ছোট একটি উদাহরন দিলাম 
+````
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>Style in React</h1>
+        <button style={btnStyle}>Button Style</button>
+
+      </div>
+    )
+  }
+}
+const btnStyle = {
+    color: "white",
+    background: 'red',
+    padding: '10px',
+    borderRadius: '3px',
+    border:'none'
+}
+export default App;
+
+````
+* আভাবে আমরা inline css ব্যবহার করি 
+
+
