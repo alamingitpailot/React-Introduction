@@ -197,5 +197,16 @@ import React, { Component } from 'react'
 } 
 export default Products;
 ```
+# useState Hook সম্পর্কে জানবো 
+##### hook ব্যবহার করে হয় function ভিতরে ৬-৭ hook রয়েছে , আমরা সেই সম্পর্কে জানবো 
+* useState Hook 
+✅ useState Structure
+❤️ const[value,setvalue] = useState(defaultValue)
+❤️ useState করার জন্য আমাকে destructuring করে নিতে হবে আমি উপরে তাই করছি 
+❤️ প্রথম প্যারামিটার useState Value দেয় 
+❤️ ২য় প্যারামিটার useState Value কে পরিবতন করে New Value Set করে দেয় 
+এই হচ্ছে আমাদের UseState Hoook.
+
+# useEffect Hook সম্পর্কে জানবো 
 
 
