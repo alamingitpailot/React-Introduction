@@ -207,6 +207,7 @@ export default Products;
 ❤️ ২য় প্যারামিটার useState Value কে পরিবতন করে New Value Set করে দেয় 
 এই হচ্ছে আমাদের UseState Hoook.
 
-# useEffect Hook সম্পর্কে জানবো 
+# এখন আমি font-awesome install করবো 
+✅ npm install --save font-awesome 
 
 
