@@ -210,4 +210,15 @@ export default Products;
 # এখন আমি font-awesome install করবো 
 ✅ npm install --save font-awesome 
 
-
+# How to Use useRef Hook
+const carouselRef = useRef();
+```
+<div ref={carouselRef} className="carousel">
+ <div className="nav nav-left">
+					<div className="ion-chevron-left carousel-arrow-icon-left"></div>
+				</div>
+</div>
+```
+❤️carouselRef.current?.====
+### Child গুলা কে ধরতে 
+carouselRef.current?.querySelectorAll('.slide');
